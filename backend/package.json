@@ -1,19 +1,26 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "start": "node index.js"
   },
-  "type": "module",
-  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "",
   "license": "ISC",
   "description": "",
+  "type": "module",
   "dependencies": {
+    "aa-sqlite": "^1.0.29",
+    "axios": "^1.7.2",
     "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "joi": "^17.13.3",
     "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7"
   }
