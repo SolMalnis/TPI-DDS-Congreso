@@ -36,7 +36,7 @@ const CongresoAttributes ={
 
     }},
     FechaCongreso:{
-        type: DataTypes.DATE,
+        type: DataTypes.DATEONLY,
         allowNull: false,
         validate: {
           notNull: {
@@ -55,7 +55,7 @@ const CongresoAttributes ={
         validate: {
           notNull: {
             args: true,
-            msg: "Fecha  es requerido",
+            msg: "la sala   es requerido",
           },
         },
 
@@ -70,7 +70,7 @@ const CongresoAttributes ={
         validate: {
           notNull: {
             args: true,
-            msg: "Fecha  es requerido",
+            msg: "orador  es requerido",
           },
         },
 
