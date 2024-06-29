@@ -46,7 +46,6 @@ const TipoEventoAttributes = {
         }
     }
 };
-
 const TipoEventoOptions = {
     timestamps: false
 };
