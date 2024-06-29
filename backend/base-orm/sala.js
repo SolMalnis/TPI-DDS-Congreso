@@ -30,3 +30,14 @@ const SalaAttributes = {
         },
     }
 }
+
+const TipoEventoOptions = {
+  timestamps: false
+};
+
+const SalaModel = {
+  SalaAttributes,
+  SalaOptions
+};
+
+export default SalaModel;
