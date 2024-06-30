@@ -1,4 +1,6 @@
 import Sequelize from "sequelize";
+import { DataTypes } from "sequelize";
+import 'dotenv/config'
 import CongresoModel from "./congreso.js";
 import EvaluacionModel from "./evaluacion.js"
 import InscripcionModel from "./inscripcion.js";
@@ -14,49 +16,50 @@ const sequelize = new Sequelize({
 })
 
 
-sequelize.define(
-    'Congresos',
+const Congresos = sequelize.define(
+    "Congresos",
     CongresoModel.CongresoAttributes,
     CongresoModel.CongresoOptions
+    
 )
 
-sequelize.define(
+const Evaluaciones =sequelize.define(
     'Evaluaciones',
     EvaluacionModel.EvaluacionAttributes,
     EvaluacionModel.EvaluacionOptions
 )
 
-sequelize.define(
+const Inscripciones = sequelize.define(
     'Inscripciones',
     InscripcionModel.InscripcionAttributes,
     InscripcionModel.InscripcionOptions
 )
 
-sequelize.define(
+const Oradores = sequelize.define(
     'Oradores',
     OradorModel.OradorAttributes,
     OradorModel.OradorOptions
 )
 
-sequelize.define(
+const Participantes = sequelize.define(
     'Participantes',
     ParticipanteModel.ParticipanteAttributes,
     ParticipanteModel. ParticipanteOptions
 )
 
-sequelize.define(
+const Patrocinadores = sequelize.define(
     'Patrocinadores',
     PatrocinadorModel.PatrocinadorAttributes,
     PatrocinadorModel. PatrocinadorOptions
 )
 
-sequelize.define(
+const Salas = sequelize.define(
     'Salas',
     SalaModel.SalaAttributes,
     SalaModel. SalaOptions
 )
 
-sequelize.define(
+const TiposCongreso = sequelize.define(
     'TiposCongreso',
     TipoCongresoModel.TipoCongresoAttributes,
     TipoCongresoModel. TipoCongresoOptions
@@ -123,4 +126,4 @@ catch (err){
     console.log({msg: err.message})
 }
 
-export default sequelize
+export default {sequelize, Congresos, Inscripciones,Oradores,Participantes,Salas,TiposCongreso,Evaluaciones,Patrocinadores}
