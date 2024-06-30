@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 
 const PatrocinadorAttributes = {
-    IDPatrocinador: {
+    IdPatrocinador: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,

@@ -1,12 +1,12 @@
 import { DataTypes } from "sequelize";
 const EvaluacionAttributes = {
-    IDEvaluacion: {
+    IdEvaluacion: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
-    IDEvento: {
+    IdCongreso: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
@@ -16,7 +16,7 @@ const EvaluacionAttributes = {
             }
         }
     },
-    IDParticipante: {
+    IdParticipante: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {

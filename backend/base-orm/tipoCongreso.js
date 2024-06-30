@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
-const OradorAttributes = {
-    IdOrador: {
+
+const TipoCongresoAttributes = {
+    IdTipoCongreso: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
@@ -20,48 +21,38 @@ const OradorAttributes = {
             }
         }
     },
-    Apellidos: {
-        type: DataTypes.STRING(60),
+    Descripcion: {
+        type: DataTypes.STRING(200),
         allowNull: false,
         validate: {
             notEmpty: {
                 args: true,
-                msg: "Apellidos son requeridos"
+                msg: "Descripción es requerida"
             },
             len: {
-                args: [1, 60],
-                msg: "Apellidos deben tener entre 1 y 60 caracteres"
+                args: [1, 200],
+                msg: "Descripción debe tener entre 1 y 200 caracteres"
             }
         }
     },
-    Biografía: {
-        type: DataTypes.TEXT,
-        allowNull: true
-    },
-    Email: {
-        type: DataTypes.STRING(100),
-        allowNull: false,
+    Participantes: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
         validate: {
-            isEmail: {
+            isInt: {
                 args: true,
-                msg: "Email debe ser una dirección válida"
-            },
-            notEmpty: {
-                args: true,
-                msg: "Email es requerido"
+                msg: "Participantes debe ser un número entero"
             }
         }
-    },
-
+    }
 };
-
-const OradorOptions = {
+const TipoCongresoOptions = {
     timestamps: false
 };
 
-const OradorModel = {
-    OradorAttributes,
-    OradorOptions
+const TipoCongresoModel = {
+    TipoCongresoAttributes,
+    TipoCongresoOptions
 };
 
-export default OradorModel;
+export default TipoCongresoModel;

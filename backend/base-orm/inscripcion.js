@@ -1,6 +1,6 @@
 import { DataTypes } from "sequelize";
 
-const InscripcionAtributes ={
+const InscripcionAttributes ={
     IdInscripcion:{
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -58,7 +58,7 @@ const InscripcionOptions = {
 }
 
 const InscripcionModel = {
-    InscripcionAtributes,
+    InscripcionAttributes,
     InscripcionOptions
 }
 
