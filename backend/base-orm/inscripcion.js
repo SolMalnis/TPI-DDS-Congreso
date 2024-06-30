@@ -41,7 +41,7 @@ const InscripcionAttributes ={
         allowNull: false,
         validate: {
             isIn: {
-                args: [['preinscripcion', 'aceptado', 'rechazado']],
+                args: [['Confirmada', 'En espera']],
                 msg: "EstadoDeInscripcion debe ser 'preinscripcion', 'aceptado' o 'rechazado'"
             },
             notEmpty: {
