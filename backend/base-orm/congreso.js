@@ -55,7 +55,7 @@ const CongresoAttributes ={
         validate: {
           notNull: {
             args: true,
-            msg: "la sala   es requerido",
+            msg: "la sala es requerido",
           },
         },
 

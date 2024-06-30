@@ -31,7 +31,7 @@ const SalaAttributes = {
     }
 }
 
-const TipoEventoOptions = {
+const SalaOptions = {
   timestamps: false
 };
 
